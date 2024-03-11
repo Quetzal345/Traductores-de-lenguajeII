@@ -14,6 +14,14 @@ En el código proporcionado, se ha implementado un analizador léxico simple en 
 
 ![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/15fd0a9100648283dd43ed8ee5d6946673126b69/Capturas/cap1.png)
 
+## [Mini analizador sintáctico (Excel)](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/4701768d08f386457ceb9424dc4aed27301f024d/Modulo1/Mini%20analizador%20lexico.xlsx)
+Realizar un archivo en excel simulando las gramáticas del ejercicio 1 y 2 del archivo 
+
+Entrada para el Ejercicio 1
+hola+mundo
+
+Entrada para el Ejercicio 2
+a+b+c+d+e+f
 
 
 
