@@ -1,5 +1,5 @@
 # Seminario de solucion de problemas de traductores-de-lenguaje II 
-En este readme se podran observar todos los tabajos de la materia.
+En este readme se podran observar todos los trabajos de la materia y asi como contruyo un traductor.
 
 ## [¿Qué es es un analizador léxico?](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/433b93d2e190244fe7c2afbeac6a5a0a538065ca/que%20es_analizadorlexico_Delgado.pdf)
 Un analizador léxico es un programa que se encarga de dividir una secuencia de
@@ -257,4 +257,6 @@ t_LPAREN = r'\('
 t_RPAREN = r'\)'
 
 ```
+Resultados del Traductor
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/67f69f4407a79f85597c1cfc0b56e3e92592096f/Capturas/cap4.png)
 
