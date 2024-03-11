@@ -7,7 +7,7 @@ caracteres en unidades más pequeñas llamadas tokens, que tienen un significado
 categoría. Los tokens son la entrada para el analizador sintáctico, que los convierte en
 una estructura de árbol que representa la sintaxis del lenguaje.
 
-## [Mini generador léxico]()
+## [Mini generador léxico](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/e28a8502635de06d21c78ad7348934c200c2f7c9/Modulo1/Mini_%20analizador%20.py)
 El análisis léxico es la primera fase en el proceso de compilación de un programa. Su objetivo es convertir una secuencia de caracteres, representando el código fuente del programa, en una secuencia de "tokens" o unidades léxicas significativas. Estos tokens pueden ser palabras clave, identificadores, operadores, números, etc. Esta fase es crucial ya que proporciona una base para el análisis sintáctico posterior.
 
 En el código proporcionado, se ha implementado un analizador léxico simple en Python que reconoce identificadores y números (tanto enteros como reales) en una cadena de entrada.
