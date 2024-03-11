@@ -23,5 +23,46 @@ hola+mundo
 Entrada para el Ejercicio 2
 a+b+c+d+e+f
 
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/06a3542761f39a6cb3e5e397e67f04ab2ca55b41/Capturas/cap2.png)
 
+## [Analizador léxico completo](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/a0b84fa3e7707e5a23a09f512a39cb24249b81c3/Modulo1/reporte_Analizadorcompleto.pdf)
+Lo que se tiene que hacer en esta actividad, es realizar el analizador léxico completo, 
+que reconozca ciertos tokens y a cada uno se le asignara un numero para que al 
+momento de imprimir muestre también el número de cada valor como una llave o un 
+paréntesis.
 
+Para realizar el código fue reutilizar el código de la practica anterior y agregar mas tokens 
+y a estos agregarles un numero aquí se muestra un ejemplo de uso, que pongo dentro 
+del código para ver si analiza bien todos los tokens.
+
+### [Codigo del analizador lexico completo](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/a0b84fa3e7707e5a23a09f512a39cb24249b81c3/Modulo1/Analizadorcompleto.py)
+
+En esta parte del codigo se puede observar que se utilizaron todos los simbolos lexicos del archivo, para asi realizar la actividad.
+```
+tokens = [
+    ('IDENTIFICADOR', r'[a-zA-Z][a-zA-Z0-9]*', 0),
+    ('ENTERO', r'\d+', 1),
+    ('REAL', r'\d+\.\d+', 2),
+    ('CADENA', r'"[^"]*"', 3),
+    ('TIPO', r'int|float|void', 4),
+    ('OP_SUMA', r'[+-]', 5),
+    ('OP_MUL', r'[*/]', 6),
+    ('OP_RELAC', r'<|<=|>|>=|!=|==', 7),
+    ('OP_OR', r'\|\|', 8),
+    ('OP_AND', r'&&', 9),
+    ('OP_NOT', r'!', 10),
+    ('OP_IGUALDAD', r'==|!=', 11),
+    ('PUNTO_Y_COMA', r';', 12),
+    ('COMA', r',', 13),
+    ('PARENTESIS_ABIERTO', r'\(', 14),
+    ('PARENTESIS_CERRADO', r'\)', 15),
+    ('LLAVE_ABIERTA', r'{', 16),
+    ('LLAVE_CERRADA', r'}', 17),
+    ('ASIGNACION', r'=', 18),
+    ('IF', r'if', 19),
+    ('WHILE', r'while', 20),
+    ('RETURN', r'return', 21),
+    ('ELSE', r'else', 22),
+    ('DESCONOCIDO', r'$', 23)
+]
+```
