@@ -66,3 +66,51 @@ tokens = [
     ('DESCONOCIDO', r'$', 23)
 ]
 ```
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/169a9f278a6284281cf6205f10366f13cd814ac8/Capturas/cap3.png)
+
+## [Mini analizador sintáctico (código)](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/e80422fce12d798ae0cce1715a1eb21124078777/Modulo1/reporte_mini_analizador.pdf)
+Generar un algoritmo para analizar los Ejercicios 1 y 2, los que se realizaron en excel, ahora se realizaran mediante codigo.
+
+Se define una clase Pila que implementa una pila básica utilizando una lista en Python. Esta clase tiene métodos para realizar operaciones típicas de una pila como push, pop, top, muestra, e isEmpty.
+```
+class Pila:
+    def __init__(self):
+        self.items = []
+
+    def push(self, elemento):
+        self.items.append(elemento)
+
+    def pop(self):
+        if not self.isEmpty():
+            return self.items.pop()
+
+    def top(self):
+        if not self.isEmpty():
+            return self.items[-1]
+
+    def muestra(self):
+        for item in self.items:
+            print(item, end=' ')
+        print()
+
+    def isEmpty(self):
+        return len(self.items) == 0
+
+```
+Se define una clase Lexico que representa un analizador léxico básico. Esta clase se utiliza para analizar una cadena de entrada y dividirla en símbolos. Tiene métodos para avanzar al siguiente símbolo y verificar si se ha llegado al final de la entrada.
+```
+class Lexico:
+    def __init__(self, entrada):
+        self.entrada = entrada
+        self.indice = 0
+        self.simbolo = ''
+
+    def sigSimbolo(self):
+        if self.indice < len(self.entrada):
+            self.simbolo = self.entrada[self.indice]
+            self.indice += 1
+
+    def terminado(self):
+        return self.indice >= len(self.entrada)
+
+```
