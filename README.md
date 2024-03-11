@@ -258,5 +258,6 @@ t_RPAREN = r'\)'
 
 ```
 Resultados del Traductor
+
 ![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/67f69f4407a79f85597c1cfc0b56e3e92592096f/Capturas/cap4.png)
 
