@@ -71,6 +71,8 @@ tokens = [
 ## [Mini analizador sintáctico (código)](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/e80422fce12d798ae0cce1715a1eb21124078777/Modulo1/reporte_mini_analizador.pdf)
 Generar un algoritmo para analizar los Ejercicios 1 y 2, los que se realizaron en excel, ahora se realizaran mediante codigo.
 
+### [Codigo](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/e80422fce12d798ae0cce1715a1eb21124078777/Modulo1/Mini%20Analizador%20sintactico.py)
+
 Se define una clase Pila que implementa una pila básica utilizando una lista en Python. Esta clase tiene métodos para realizar operaciones típicas de una pila como push, pop, top, muestra, e isEmpty.
 ```
 class Pila:
@@ -112,5 +114,43 @@ class Lexico:
 
     def terminado(self):
         return self.indice >= len(self.entrada)
+
+```
+
+![]()
+
+## [Analizador Sintáctico (Implementación usando Objetos)](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/12f6f5a9cfe146f9c95e5bc60c7e088686072a88/Modulo1/reporte_analizador_objetos.pdf)
+Se ha implementado una jerarquía de clases utilizando herencia y clases abstractas para 
+representar elementos de una pila, como Terminal, NoTerminal, y Estado.
+La clase Pila se encarga de gestionar una lista que actúa como una pila, con métodos 
+para agregar, eliminar y mostrar elementos.
+Se han creado objetos de las clases definidas, insertándolos en la pila y mostrando su 
+contenido.
+La estructura general del código sigue principios de programación orientada a objetos 
+(OOP) con encapsulamiento y polimorfismo.
+
+Se definen tres clases concretas que heredan de ElementoPila: Terminal, NoTerminal y Estado. Cada una de estas clases representa un tipo de elemento que puede estar en la pila. Cada clase implementa el método muestra según su propio tipo.
+
+```
+class Terminal(ElementoPila):
+    def __init__(self, simbolo):
+        self.simbolo = simbolo
+    
+    def muestra(self):
+        print(f"Terminal: {self.simbolo}")
+
+class NoTerminal(ElementoPila):
+    def __init__(self, simbolo):
+        self.simbolo = simbolo
+    
+    def muestra(self):
+        print(f"No terminal: {self.simbolo}")
+
+class Estado(ElementoPila):
+    def __init__(self, numero):
+        self.numero = numero
+    
+    def muestra(self):
+        print(f"Estado: {self.numero}")
 
 ```
