@@ -117,7 +117,7 @@ class Lexico:
 
 ```
 
-![]()
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/0b87f605e2f632357813b220fe1dba8b9848e56b/Capturas/cap5.png)
 
 ## [Analizador Sintáctico (Implementación usando Objetos)](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/12f6f5a9cfe146f9c95e5bc60c7e088686072a88/Modulo1/reporte_analizador_objetos.pdf)
 Se ha implementado una jerarquía de clases utilizando herencia y clases abstractas para 
@@ -154,3 +154,107 @@ class Estado(ElementoPila):
         print(f"Estado: {self.numero}")
 
 ```
+
+Se define la clase Pila, que representa una pila de elementos. Tiene métodos para agregar (push) y quitar (pop) elementos de la pila, así como para obtener el elemento en la parte superior de la pila (top). Además, tiene un método muestra para mostrar el contenido de la pila.
+
+```
+class Pila:
+    def __init__(self):
+        self.lista = []
+
+    def push(self, elemento):
+        self.lista.insert(0, elemento)
+
+    def pop(self):
+        return self.lista.pop(0)
+
+    def top(self):
+        return self.lista[0] if self.lista else None
+
+    def muestra(self):
+        print("Pila:")
+        for elemento in self.lista:
+            elemento.muestra()
+        print()
+
+```
+## [Gramática del compilador](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/433b93d2e190244fe7c2afbeac6a5a0a538065ca/Modulo1/Gramatica_compilador.pdf)
+Este código implementa un analizador léxico y un analizador sintáctico utilizando una 
+tabla LR para realizar el análisis sintáctico de un archivo de código fuente. Aquí hay una 
+introducción para comprender mejor cada parte:
+Analizador Léxico (scanner): Esta función toma el código fuente como entrada y genera 
+una lista de tokens. Los tokens son los componentes básicos del lenguaje de 
+programación, como palabras clave, identificadores, operadores, etc. El analizador léxico 
+divide el código fuente en palabras individuales y las almacena como tokens.
+
+Esta clase tiene cuatro atributos: idRegla, lonRegla, noTerminal, y table. Estos atributos se inicializan como listas vacías en el constructor __init__.
+
+```
+class LRTable:
+    def __init__(self, filename):
+        self.idRegla = []
+        self.lonRegla = []
+        self.noTerminal = []
+        self.table = []
+
+```
+
+Se lee cada línea del archivo y se almacenan en la variable lines. Luego, se itera sobre las primeras tres líneas (lines[:3]). Para cada línea, se eliminan los espacios en blanco al inicio y al final con strip(), y luego se divide la línea en partes utilizando el carácter de tabulación como separador ('\t') mediante split('\t'). Estas partes se almacenan en la lista parts.
+```
+lines = file.readlines()
+for line in lines[:3]:
+    parts = line.strip().split('\t')
+    try:
+        self.idRegla.append(int(parts[0]))
+        self.lonRegla.append(int(parts[1]))
+        self.noTerminal.append(parts[2])
+    except IndexError:
+        print("Error: formato incorrecto en la línea:", line.strip())
+
+```
+
+## [Construccion del traductor](https://github.com/Quetzal345/Tolerante-a-fallas/blob/9ed87781a14dda29e0fa896d2b805ffed479d3b2/Modulo%201/Avance_Traductor.pdf)
+
+En esta seccion se veran los avances en general del traductor, ya que las demas secciones explican partes del traductor, aqui veran el traductor armado si se podria decir, claro que se ira actualizando pero se veran los avances.
+
+parsetab.py contiene información importante sobre cómo el analizador sintáctico debe interpretar y procesar la entrada
+
+_tabversion: Indica la versión de la tabla de análisis. Esto puede ser útil para garantizar la compatibilidad entre diferentes versiones del generador de analizadores sintácticos.
+
+_lr_method: Especifica el método de análisis utilizado. En este caso, se utiliza el método LALR (Look-Ahead Left-to-Right, Rightmost derivation).
+
+_lr_signature: Define la firma de la tabla de análisis. Esta firma describe la gramática que el analizador debe reconocer. La firma está escrita en una notación especial que describe las reglas de producción gramatical del lenguaje. Por ejemplo, en la firma proporcionada, podemos ver las reglas de producción para la gramática del lenguaje, como las reglas para las expresiones, términos y factores.
+
+```
+_tabversion = '3.10'
+_lr_method = 'LALR'
+_lr_signature = 'DIVIDE LPAREN MINUS NUMBER PLUS RPAREN TIMESexpression :
+expression PLUS term\n | expression MINUS
+term\n | termterm : term TIMES factor\n |
+term DIVIDE factor\n | factorfactor : NUMBER\n |
+LPAREN expression RPAREN'
+
+```
+
+Se define una función para manejar el token NUMBER, que representa un número entero en la entrada. Esta función utiliza una expresión regular para identificar y convertir los números en enteros.
+
+```
+def t_NUMBER(t):
+    r'\d+'
+    t.value = int(t.value)
+    return t
+
+```
+
+Se definen expresiones regulares para cada token simple. Estas expresiones regulares se utilizan para identificar y reconocer patrones en la entrada que corresponden a cada token.
+
+```
+t_PLUS = r'\+'
+t_MINUS = r'-'
+t_TIMES = r'\*'
+t_DIVIDE = r'/'
+t_LPAREN = r'\('
+t_RPAREN = r'\)'
+
+```
+
