@@ -396,4 +396,11 @@ Asi se ve el arbol en la consola
     ]
 ]
 ```
+Asi se ve el arbol en la interfaz grafica, quise mostrarlo en una interfaz, no me salio de la mejor manera, pero asi se ve.
 
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/8cd7fab7f7d5d434c56ab960897aec77e3f7d27b/Capturas/arbol.png)
+
+
+# Conclusion
+
+Al terminar la parte del arbol, la verdad me costo mucho para que se mostrara de manera adecuada en la consola, pero siento que logre entregar algo que muestra bien el funcionamiento.
