@@ -263,3 +263,137 @@ Resultados del Traductor
 
 ![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/67f69f4407a79f85597c1cfc0b56e3e92592096f/Capturas/cap4.png)
 
+
+# Proyecto Final
+Objetivo: reunir los programas y realizar un arbol para hacer que se compile en un solo programa tanto como lexico, sintactico y semantico.
+
+requerimientos:
+
+Analizador lexico
+
+Analizador Sintactico
+
+Analizador Semantico
+
+Gramatica del compilador(compilador.Ir)
+
+Arbol Sintactico
+
+A continuacion Se mostrara el funcionamiento del codigo del Proyecto Final de la materia, el cual cuenta con la implementacion del Analizador Lexico, Analizador Sintactico y el Analizador Semantico.
+
+para esta elaboración y decodificación del programa es necesario contar con la version 3.12 de python,(es imprescindible contar con la versión actualizada para compilar) y Tkinter para facilitar la selección del archivo que se desea traducir, si se utiliza otra version de python puede ocasionar que no compile el programa.
+
+Al iniciar el programa se toma un archivo txt para que lea el ejemplo el arbol sintactico.
+
+Este es el ejemplo que tome
+```
+int main() {
+    int x = 10;
+    if (x == 10) {
+        return 0;
+    }
+    else {
+        return 1;
+    }
+}
+
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    }
+    else {
+        return n * factorial(n - 1);
+    }
+}
+
+float square(float x) {
+    return x * x;
+}
+```
+Despues de que el programa compila se muestra el resultado
+
+Asi se ve el arbol en la consola
+```
+[FUNCTION_DECLARATION    [KEYWORD: int]
+    [IDENTIFIER: main]
+    [BLOCK        [STATEMENT            [KEYWORD: int]
+            [IDENTIFIER: x]
+            [=]
+            [NUMBER: 10]
+            [;]
+        ]
+        [IF_STATEMENT            [(]
+            [EXPRESSION                [IDENTIFIER: x]
+                [==]
+                [NUMBER: 10]
+            ]
+            [)]
+            [BLOCK                [STATEMENT                    [RETURN]
+                    [NUMBER: 0]
+                    [;]
+                ]
+            ]
+            [ELSE_BLOCK                [BLOCK                    [STATEMENT                        [RETURN]
+                        [NUMBER: 1]
+                        [;]
+                    ]
+                ]
+            ]
+        ]
+    ]
+]
+[FUNCTION_DECLARATION    [KEYWORD: int]
+    [IDENTIFIER: factorial]
+    [(]
+    [PARAMETER        [KEYWORD: int]
+        [IDENTIFIER: n]
+    ]
+    [)]
+    [BLOCK        [IF_STATEMENT            [(]
+            [EXPRESSION                [IDENTIFIER: n]
+                [==]
+                [NUMBER: 0]
+            ]
+            [)]
+            [BLOCK                [STATEMENT                    [RETURN]
+                    [NUMBER: 1]
+                    [;]
+                ]
+            ]
+            [ELSE_BLOCK                [BLOCK                    [STATEMENT                        [RETURN]
+                        [EXPRESSION                            [IDENTIFIER: n]
+                            [*]
+                            [FUNCTION_CALL                                [IDENTIFIER: factorial]
+                                [(]
+                                [EXPRESSION                                    [IDENTIFIER: n]
+                                    [-]
+                                    [NUMBER: 1]
+                                ]
+                                [)]
+                            ]
+                        ]
+                        [;]
+                    ]
+                ]
+            ]
+        ]
+    ]
+]
+[FUNCTION_DECLARATION    [KEYWORD: float]
+    [IDENTIFIER: square]
+    [(]
+    [PARAMETER        [KEYWORD: float]
+        [IDENTIFIER: x]
+    ]
+    [)]
+    [BLOCK        [STATEMENT            [RETURN]
+            [EXPRESSION                [IDENTIFIER: x]
+                [*]
+                [IDENTIFIER: x]
+            ]
+            [;]
+        ]
+    ]
+]
+```
+
