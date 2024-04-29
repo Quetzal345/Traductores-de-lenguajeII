@@ -25,7 +25,7 @@ hola+mundo
 Entrada para el Ejercicio 2
 a+b+c+d+e+f
 
-![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/06a3542761f39a6cb3e5e397e67f04ab2ca55b41/Capturas/cap2.png)
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/5235dbba04ab104423d1d4848ab6178107210ea1/Capturas/captura2.png)
 
 ## [Analizador léxico completo](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/a0b84fa3e7707e5a23a09f512a39cb24249b81c3/Modulo1/reporte_Analizadorcompleto.pdf)
 Lo que se tiene que hacer en esta actividad, es realizar el analizador léxico completo, 
