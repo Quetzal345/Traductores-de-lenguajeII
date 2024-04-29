@@ -286,7 +286,28 @@ para esta elaboración y decodificación del programa es necesario contar con la
 Al iniciar el programa se toma un archivo txt para que lea el ejemplo el arbol sintactico.
 
 # Resultados del Arbol
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/037e5a9156014b9567ff9b0af4574a90d3128ac6/Capturas/cap21.png)
 
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/037e5a9156014b9567ff9b0af4574a90d3128ac6/Capturas/cap22.png)
+
+```
+int a;
+int suma(int a, int b){
+return a+b;
+}
+
+int main(){
+float a;
+int b;
+int c;
+c = a+b;
+c = suma(8,9);
+}
+```
+Muestra del codigo que se agrego al arbol sintactico.
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/037e5a9156014b9567ff9b0af4574a90d3128ac6/Capturas/Cap23.png)
+
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/037e5a9156014b9567ff9b0af4574a90d3128ac6/Capturas/cap25.png)
 
 
 # Conclusion
