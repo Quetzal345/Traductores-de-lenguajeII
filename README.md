@@ -309,6 +309,23 @@ Muestra del codigo que se agrego al arbol sintactico.
 
 ![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/037e5a9156014b9567ff9b0af4574a90d3128ac6/Capturas/cap25.png)
 
+Etapa: Analizador semántico
+Ejemplo 1
+```
+int main(){
+float a;
+int b;
+int c;
+c = a+b;
+c = suma(8,9);
+}
+
+Ejemplo 2:
+int a;
+int suma(int a, int b){
+return a+b;
+}
+```
 
 # Conclusion
 
