@@ -319,13 +319,9 @@ int c;
 c = a+b;
 c = suma(8,9);
 }
-
-Ejemplo 2:
-int a;
-int suma(int a, int b){
-return a+b;
-}
 ```
+
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/f8724be8dd360d4f7e6fbe8bf18fc3a8b1e44ed5/Capturas/Ejemplo1.jpeg)
 
 # Conclusion
 
