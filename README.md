@@ -309,7 +309,8 @@ Muestra del codigo que se agrego al arbol sintactico.
 
 ![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/037e5a9156014b9567ff9b0af4574a90d3128ac6/Capturas/cap25.png)
 
-Etapa: Analizador semántico
+# Etapa: Analizador semántico
+
 Ejemplo 1
 ```
 int main(){
