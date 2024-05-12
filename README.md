@@ -1,5 +1,11 @@
 # Seminario de solucion de problemas de traductores-de-lenguaje II 
-En este readme se podran observar todos los trabajos de la materia y la construccion del traductor.
+
+
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/175887e7f87252faa9d6b876c2273e79293498f2/Capturas/UDG.png)
+
+- Nombre: Eduardo Quetzal Delgado Pimentel
+- Codigo: 217239716
+
 
 ## [¿Qué es es un analizador léxico?](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/433b93d2e190244fe7c2afbeac6a5a0a538065ca/que%20es_analizadorlexico_Delgado.pdf)
 Un analizador léxico es un programa que se encarga de dividir una secuencia de
