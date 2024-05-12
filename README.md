@@ -28,8 +28,12 @@ Realizar un archivo en excel simulando las gramáticas del ejercicio 1 y 2 del a
 Entrada para el Ejercicio 1
 hola+mundo
 
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/c65ff94bd05a02c2d5a3b8feac3b69c1919d0876/Capturas/Ejercicio1.png)
+
 Entrada para el Ejercicio 2
 a+b+c+d+e+f
+
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/c65ff94bd05a02c2d5a3b8feac3b69c1919d0876/Capturas/Ejercicio2.png)
 
 ![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/5235dbba04ab104423d1d4848ab6178107210ea1/Capturas/captura2.png)
 
