@@ -275,13 +275,13 @@ Objetivo: reunir los programas y realizar un arbol para hacer que se compile en 
 
 requerimientos:
 
-Analizador lexico
+- Analizador lexico
 
-Analizador Sintactico
+- Analizador Sintactico
 
-Analizador Semantico
+- Analizador Semantico
 
-Gramatica del compilador(compilador.Ir)
+- Gramatica del compilador(compilador.Ir)
 
 Arbol Sintactico
 
