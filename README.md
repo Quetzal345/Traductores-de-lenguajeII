@@ -308,7 +308,7 @@ class codigo():
         self.comienzo = 0
         self.codigoif = list()
         self.cantidadparametros = 0
-    def traductor61012(self, bandera, code):
+    def traducto(self, bandera, code):
         self.bandera = bandera
         self.code = code
 
