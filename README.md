@@ -1,4 +1,4 @@
-# Seminario de solucion de problemas de traductores-de-lenguaje II 
+## Seminario de solucion de problemas de traductores-de-lenguaje II 
 
 
 ![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/175887e7f87252faa9d6b876c2273e79293498f2/Capturas/UDG.png)
@@ -271,6 +271,34 @@ t_LPAREN = r'\('
 t_RPAREN = r'\)'
 
 ```
+## Generador de Codigo 
+
+```
+import subprocess
+
+def generar(archivo):
+    try:
+        archivo = '../../' + archivo
+
+        # Convertir el código C a ensamblador
+        subprocess.run(["gcc", "-S", "-masm=intel", archivo, "-o", "../../ejecutable/final.asm"], cwd="MINGW/bin")
+
+        # Enlazar el código objeto para crear un test ejecutable
+        subprocess.run(["gcc", archivo, "-o", "../../ejecutable/final.exe"], cwd="MINGW/bin")
+
+        # Abrir el archivo .exe después de generar
+        subprocess.run(["start", "../../ejecutable/final.exe"], cwd="MINGW/bin", shell=True)
+
+    except subprocess.CalledProcessError as e:
+        print(f"Error: {e}")
+    except FileNotFoundError as e:
+        print(f"Error: {e}")
+    except Exception as e:
+        print(f"Error desconocido: {e}")
+
+```
+
+
 Resultados del Traductor
 
 ![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/67f69f4407a79f85597c1cfc0b56e3e92592096f/Capturas/cap4.png)
