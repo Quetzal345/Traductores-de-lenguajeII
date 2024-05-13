@@ -356,6 +356,8 @@ c = suma(8.5,9.9);
 
 Resultado
 
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/a5dca021fd46a83be55e27d9df8800a4c3a8eefa/Capturas/11.png)
+
 
 # Conclusion
 
