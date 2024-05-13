@@ -323,15 +323,9 @@ programa {
 }
 ```
 
-Tabla 
---------------------
-Identificador | Tipo    | Ámbito | Es Función
------------------------------------------------
-x             | entero  | Global | False
-operacion     | función | Global | True
-y             | entero  | Global | False
-resultado     | entero  | suma   | False
-resultado_s   | entero  | Global | False
+Resultado
+
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/57c3bfcbedb32925587df81a2d588ce2ddb475c6/Capturas/resultado1.png)
 
 
 ## Generador de Codigo 
