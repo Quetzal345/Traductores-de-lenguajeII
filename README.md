@@ -297,27 +297,28 @@ t_RPAREN = r'\)'
 ## Generador de Codigo 
 
 ```
-import subprocess
+listaref = list()
+globals()['contexto']=''
+globals()['primera']=0
+class codigo():
+    def __init__(self):
 
-def generar(archivo):
-    try:
-        archivo = '../../' + archivo
+        self.codigo = list()
+        self.posicionvar = 4
+        self.comienzo = 0
+        self.codigoif = list()
+        self.cantidadparametros = 0
+    def traductor61012(self, bandera, code):
+        self.bandera = bandera
+        self.code = code
 
-        # Convertir el código C a ensamblador
-        subprocess.run(["gcc", "-S", "-masm=intel", archivo, "-o", "../../ejecutable/final.asm"], cwd="MINGW/bin")
 
-        # Enlazar el código objeto para crear un test ejecutable
-        subprocess.run(["gcc", archivo, "-o", "../../ejecutable/final.exe"], cwd="MINGW/bin")
+        if self.bandera == 6:
+            self.codigo.append(str(self.code)+': db 0')
 
-        # Abrir el archivo .exe después de generar
-        subprocess.run(["start", "../../ejecutable/final.exe"], cwd="MINGW/bin", shell=True)
-
-    except subprocess.CalledProcessError as e:
-        print(f"Error: {e}")
-    except FileNotFoundError as e:
-        print(f"Error: {e}")
-    except Exception as e:
-        print(f"Error desconocido: {e}")
+        if self.bandera == 10 or self.bandera == 12:
+            if globals()['primera']==0:
+                self.codigo.append('section .text \n')
 
 ```
 
