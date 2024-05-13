@@ -411,6 +411,27 @@ Resultado
 ![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/a5dca021fd46a83be55e27d9df8800a4c3a8eefa/Capturas/11.png)
 
 
+Cadena Utilizada 
+
+```
+cad = " int sum(int a){
+int z;
+z = a + 2;
+return z;
+}
+int main){
+int x;\ int z;
+x = 7;
+z = 2;
+z = sum(x);
+print(z)
+return z;
+｝"
+```
+
+## Resultado
+
+
 # Conclusion
 
 Al terminar la parte del arbol, la verdad me costo mucho para que se mostrara de manera adecuada en la consola, pero siento que logre entregar algo que muestra bien el funcionamiento.
