@@ -16,6 +16,29 @@ una estructura de árbol que representa la sintaxis del lenguaje.
 ## [Mini generador léxico](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/e28a8502635de06d21c78ad7348934c200c2f7c9/Modulo1/Mini_%20analizador%20.py)
 El análisis léxico es la primera fase en el proceso de compilación de un programa. Su objetivo es convertir una secuencia de caracteres, representando el código fuente del programa, en una secuencia de "tokens" o unidades léxicas significativas. Estos tokens pueden ser palabras clave, identificadores, operadores, números, etc. Esta fase es crucial ya que proporciona una base para el análisis sintáctico posterior.
 
+def analizador_lexico(cadena):
+    # Definimos las expresiones regulares para identificadores y números reales
+    patron_identificador = r'[a-zA-Z][a-zA-Z0-9]*'
+    patron_numero_real = r'\d+\.\d+'
+    patron_numero_entero = r'\d+'
+```
+    # Lista para almacenar los tokens encontrados
+    tokens = []
+
+    # Escaneo de la cadena para identificar tokens
+    while cadena:
+        # Eliminamos los espacios en blanco al inicio de la cadena
+        cadena = cadena.lstrip()
+
+        # Verificamos si el token es un identificador
+        match_identificador = re.match(patron_identificador, cadena)
+        if match_identificador:
+            identificador = match_identificador.group(0)
+            tokens.append(('IDENTIFICADOR', identificador))
+            cadena = cadena[len(identificador):].lstrip()
+            continue
+
+```
 En el código proporcionado, se ha implementado un analizador léxico simple en Python que reconoce identificadores y números (tanto enteros como reales) en una cadena de entrada.
 
 cadena_prueba = "x12 y 34.56 z 78.9 123"
