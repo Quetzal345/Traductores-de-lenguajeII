@@ -215,6 +215,10 @@ class Pila:
         print()
 
 ```
+Resultado:
+
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/9fba1b439e48ac4244a69b0525237f157ed4cb6c/Capturas/WhatsApp%20Image%202024-05-13%20at%206.56.12%20AM.jpeg)
+
 ## [Gramática del compilador](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/433b93d2e190244fe7c2afbeac6a5a0a538065ca/Modulo1/Gramatica_compilador.pdf)
 Este código implementa un analizador léxico y un analizador sintáctico utilizando una 
 tabla LR para realizar el análisis sintáctico de un archivo de código fuente. Aquí hay una 
