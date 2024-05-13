@@ -298,6 +298,42 @@ t_LPAREN = r'\('
 t_RPAREN = r'\)'
 
 ```
+## Analizador Semantico
+Un analizador semántico es una parte de un compilador o intérprete de un lenguaje de programación que se encarga de verificar y asignar significado a las construcciones sintácticas de un programa. Mientras que el analizador léxico se encarga de convertir el flujo de caracteres del código fuente en tokens, el analizador sintáctico (parser) estructura estos tokens en una representación jerárquica llamada árbol sintáctico. El analizador semántico va más allá, analizando el significado de estas estructuras en el contexto del lenguaje de programación y aplicando reglas y restricciones semánticas. 
+
+Por ejemplo, el analizador semántico puede verificar si las variables se utilizan de manera consistente, si los tipos de datos son compatibles en las operaciones, si las funciones están correctamente definidas y utilizadas, entre otras cosas. En resumen, su función es garantizar que el programa tenga sentido semántico y esté libre de errores que no sean detectables a nivel sintáctico.
+
+Ejemplo
+```
+programa {
+    entero x
+    funcion operacion(a, b) {
+        entero resultado
+        resultado = a + b
+        regresa resultado
+    }
+    
+    x = 15
+    entero y = 20
+    si (x > y) {
+        entero resultado_s
+        resultado_s = suma(x, y)
+        imprimir("La suma es: ", resultado_s)
+    }
+}
+```
+
+Tabla 
+--------------------
+Identificador | Tipo    | Ámbito | Es Función
+-----------------------------------------------
+x             | entero  | Global | False
+operacion     | función | Global | True
+y             | entero  | Global | False
+resultado     | entero  | suma   | False
+resultado_s   | entero  | Global | False
+
+
 ## Generador de Codigo 
 
 ```
@@ -413,27 +449,6 @@ c = suma(8.5,9.9);
 Resultado
 
 ![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/a5dca021fd46a83be55e27d9df8800a4c3a8eefa/Capturas/11.png)
-
-
-Cadena Utilizada 
-
-```
-cad = " int sum(int a){
-int z;
-z = a + 2;
-return z;
-}
-int main){
-int x;\ int z;
-x = 7;
-z = 2;
-z = sum(x);
-print(z)
-return z;
-｝"
-```
-
-## Resultado
 
 
 # Conclusion
