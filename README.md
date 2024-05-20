@@ -462,10 +462,12 @@ int main ( ) {
     resul2 = resta ( resul1 ) ;
 }
 ```
+
 ## Resultado al compilar
 
-***********Ejemplo**********
 ```
+***********Ejemplo**********
+
  int suma ( int a , int b ) {
     return a + b ;
 }
