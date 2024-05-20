@@ -464,6 +464,175 @@ int main ( ) {
 ```
 ## Resultado al compilar
 
+***********Ejemplo**********
+```
+ int suma ( int a , int b ) {
+    return a + b ;
+}
+int resta ( int c ) {
+    return c - c ;
+}
+
+int main ( ) {
+    int resul1 ;
+    int resul2 ;
+    resul1 = suma ( 5 , 9 ) ;
+    resul2 = resta ( resul1 ) ;
+}
+
+
+----------ANÁLISIS LÉXICO----------
+
+-TOKEN-         -SÍMBOLO-               -TIPO-
+int              entero                  4
+suma            Variable
+(                abrirPar                14
+int              entero                  4
+a               identificador            0
+,                coma            13
+int              entero                  4
+b               identificador            0
+)                cerrarPar               15
+{                abrirLlv                16
+return           retornar                21
+a               identificador            0
++                opSuma                  5
+b               identificador            0
+;                puntYcom                12
+}                cerrarLlv               17
+int              entero                  4
+resta           Variable
+(                abrirPar                14
+int              entero                  4
+c               identificador            0
+)                cerrarPar               15
+{                abrirLlv                16
+return           retornar                21
+c               identificador            0
+-                opSuma                  5
+c               identificador            0
+;                puntYcom                12
+}                cerrarLlv               17
+int              entero                  4
+main             principal               0
+(                abrirPar                14
+)                cerrarPar               15
+{                abrirLlv                16
+int              entero                  4
+resul1          Variable
+;                puntYcom                12
+int              entero                  4
+resul2          Variable
+;                puntYcom                12
+resul1          Variable
+=                opRelac                 18
+suma            Variable
+(                abrirPar                14
+5               numEnt                  1
+,                coma            13
+9               numEnt                  1
+)                cerrarPar               15
+;                puntYcom                12
+resul2          Variable
+=                opRelac                 18
+resta           Variable
+(                abrirPar                14
+resul1          Variable
+)                cerrarPar               15
+;                puntYcom                12
+}                cerrarLlv               17
+
+
+***********Arbol Sintactico*************
+
+programa
+Definiciones
+Definicion
+DefFunc
+Parametros
+ListaParam
+ListaParam
+BloqFunc
+DefLocales
+DefLocal
+Sentencia
+ValorRegresa
+Expresion
+Expresion
+Termino
+    Expresion
+    Termino
+                    DefLocales
+                            Definiciones
+                            Definicion
+                            DefFunc
+                            Parametros
+                            ListaParam
+                            BloqFunc
+                            DefLocales
+                            DefLocal
+                            Sentencia
+                            ValorRegresa
+                            Expresion
+                            Expresion
+                            Termino
+                                Expresion
+                                Termino
+                                                DefLocales
+                                                        Definiciones
+                                                        Definicion
+                                                        DefFunc
+                                                        Parametros
+                                                        BloqFunc
+                                                        DefLocales
+                                                        DefLocal
+                                                        DefVar
+                                                        ListaVar
+                                                           DefLocales
+                                                           DefLocal
+                                                           DefVar
+                                                           ListaVar
+                                                              DefLocales
+                                                              DefLocal
+                                                              Sentencia
+                                                              Expresion
+                                                              Termino
+                                                              LlamadaFunc
+                                                              Argumentos
+                                                              Expresion
+                                                              Termino
+                                                                  ListaArgumentos
+                                                                  Expresion
+                                                                  Termino
+                                                                      ListaArgumentos
+                                                                                        DefLocales
+                                                                                        DefLocal
+                                                                                        Sentencia
+                                                                                        Expresion
+                                                                                        Termino
+                                                                                        LlamadaFunc
+                                                                                        Argumentos
+                                                                                        Expresion
+                                                                                        Termino
+                                                                                            ListaArgumentos
+                                                                                                              DefLocales
+                                                                                                                                  Definiciones
+******* Tabla de Simbolos *******
+
+ID: suma | Tipo: Funcion | Tipo de dato: int | Ambito: Global
+ID: a | Tipo: Parametro | Tipo de dato: int | Ambito: suma
+ID: b | Tipo: Parametro | Tipo de dato: int | Ambito: suma
+ID: resta | Tipo: Funcion | Tipo de dato: int | Ambito: Global
+ID: c | Tipo: Parametro | Tipo de dato: int | Ambito: resta
+ID: main | Tipo: Funcion | Tipo de dato: int | Ambito: Global
+ID: resul1 | Tipo: Variable | Tipo de dato: int | Ambito: main
+ID: resul2 | Tipo: Variable | Tipo de dato: int | Ambito: main
+
+
+******* Analisis Semantico *******
+No se encontraron errores
+```
+
 # Conclusion
 
 Al terminar la parte del arbol, la verdad me costo mucho para que se mostrara de manera adecuada en la consola, pero siento que logre entregar algo que muestra bien el funcionamiento.
