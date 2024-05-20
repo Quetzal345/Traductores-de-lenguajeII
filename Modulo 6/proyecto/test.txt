@@ -1,0 +1,13 @@
+int suma ( int a , int b ) {
+    return a + b ;
+}
+int resta ( int c ) {
+    return c - c ;
+}
+
+int main ( ) {
+    int resul1 ;
+    int resul2 ;
+    resul1 = suma ( 5 , 9 ) ;
+    resul2 = resta ( resul1 ) ;
+}
