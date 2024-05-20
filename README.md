@@ -634,7 +634,27 @@ ID: resul2 | Tipo: Variable | Tipo de dato: int | Ambito: main
 ******* Analisis Semantico *******
 No se encontraron errores
 ```
+## Capturas
+![]()
 
+![]()
+## Ahora que pasaria si ponemos mal el ejemplo 
+```
+int suma ( int a , int b ) {
+    return a + b ;
+}
+int resta ( int c ) {
+    return c - c ;
+}
+
+int main ( ) {
+    char resul1 
+    int resul2 
+    resul1 = suma ( 5 , 9 ) ;
+    resul2 = resta ( resul1 ) ;
+}
+```
+![]()
 # Conclusion
 
 Al terminar la parte del arbol, la verdad me costo mucho para que se mostrara de manera adecuada en la consola, pero siento que logre entregar algo que muestra bien el funcionamiento.
