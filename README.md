@@ -635,9 +635,9 @@ ID: resul2 | Tipo: Variable | Tipo de dato: int | Ambito: main
 No se encontraron errores
 ```
 ## Capturas
-![]()
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/17571f8edb6decd743e86d548e569590de302599/Capturas/Resultado_Final.png)
 
-![]()
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/17571f8edb6decd743e86d548e569590de302599/Capturas/Codigo_Traducido.png)
 ## Ahora que pasaria si ponemos mal el ejemplo 
 ```
 int suma ( int a , int b ) {
@@ -654,7 +654,9 @@ int main ( ) {
     resul2 = resta ( resul1 ) ;
 }
 ```
-![]()
+Como se puede observar en la captura, el programa identifica los errores semanticos del ejemplo y muestra de que tipo son y la ubicacion de los mismos.
+
+![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/17571f8edb6decd743e86d548e569590de302599/Capturas/Error1.png)
 # Conclusion
 
 Al terminar la parte del arbol, la verdad me costo mucho para que se mostrara de manera adecuada en la consola, pero siento que logre entregar algo que muestra bien el funcionamiento.
