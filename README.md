@@ -444,6 +444,25 @@ Resultado
 
 ![](https://github.com/Quetzal345/Traductores-de-lenguajeII/blob/a5dca021fd46a83be55e27d9df8800a4c3a8eefa/Capturas/11.png)
 
+# Resultados del proyecto final 
+
+Ejemplo con el que se prueba el programa.
+```
+int suma ( int a , int b ) {
+    return a + b ;
+}
+int resta ( int c ) {
+    return c - c ;
+}
+
+int main ( ) {
+    int resul1 ;
+    int resul2 ;
+    resul1 = suma ( 5 , 9 ) ;
+    resul2 = resta ( resul1 ) ;
+}
+```
+## Resultado al compilar
 
 # Conclusion
 
